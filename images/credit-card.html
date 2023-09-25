@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card</title>
+    <link rel="stylesheet" href="credit-card.css">
+</head>
+<body>
+    <main class="container">
+        <section class="ui">
+            <div class="container-left">
+               <form id="credit-card">
+                <div class="number-container">
+                    <label> Card Number</label>
+                    <input type="text" name="card-number" 
+                    id="card-number" maxlength="19"
+                    placeholder="1234 5678 9101 1121"
+                    required
+                    onkeypress="return event.charCode >= 48 &&
+                    event.charCode <= 57">
+                </div>
+                <div class="name-container">
+                    <label> Holder</label>
+                    <input type="text" name="name-text" 
+                    id="name-text" maxlength="30"
+                    placeholder="NOAH JACOB"
+                    required 
+                    onkeypress="return (event.charCode > 64 &&
+                    event.charCode < 91) || (event.charCode > 
+                    96 && event.charCode < 123) || event.key == ' '">
+                </div>a
+                <div class="infos-container">
+                    <div class="expiration-container">
+                        <label>Valid-thru</label>
+                        <input type="text" name="Valid-thru-text" 
+                        id="valid-thru-text" maxlength="5"
+                        placeholder="02/40"
+                        required
+                        
+                        onkeypress="return event.charCode >= 48
+                        && event.charCode <= 57">
+                    </div>
+                    <div class="cvv-container">
+                        <label>CVV</label>
+                        <input type="text" name="cvv-text"
+                        id="cvv-text" maxlength="4"
+                        placeholder="0000"
+                        required
+                        onkeypress="return event.charCode >= 48
+                        && event.charCode <= 57">
+                    </div>
+        
+                </div>
+                <input type="submit" value="ADD" id="add">
+               </form> 
+            </div>
+            <div class="container-right">
+                <div class="card">
+                    <div class="intern">
+                        <svg class="approximation" width="84" height="47" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="23.478" cy="23.5" rx="23.478" ry="23.5" fill="#fff"/><path d="M83.5 23.5c0 5.565-4.507 10.075-10.065 10.075-5.559 0-10.065-4.51-10.065-10.075 0-5.565 4.506-10.075 10.065-10.075 5.558 0 10.065 4.51 10.065 10.075Z" stroke="#fff"/></svg>
+                        <div class="card-number">
+                            <div class="number-v1">1234 5678 9101 1121
+                            </div>
+                        </div>
+                        <div class="card-holder">
+                            <label>Holder</label>
+                            <div class="name-v1">NOAH JACOB
+                            </div>
+                        </div>
+                        <div class="card-infos">
+                            <div class="exp">
+                                <label >valid-thru</label>
+                                <div class="expiration-v1">02/20</div>
+                            </div>
+                        <div class="cvv">
+                            <label >CVV</label>
+                            <div class="cvv-v1">02/20</div>
+                        </div>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <script src="credit-card.js"></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+  <link rel="stylesheet" href="card.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <section class="section_1">
+    <div class="container">
+      <div class="card_section">
+        <div class="font_card" >
+          <div class="font_card_content">
+                <svg width="84" height="47" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="23.478" cy="23.5" rx="23.478" ry="23.5" fill="#fff"/><path d="M83.5 23.5c0 5.565-4.507 10.075-10.065 10.075-5.559 0-10.065-4.51-10.065-10.075 0-5.565 4.506-10.075 10.065-10.075 5.558 0 10.065 4.51 10.065 10.075Z" stroke="#fff"/></svg>
+             <div class="name-content">
+                <h4 class="number-v1">0000 0000 0000 0000</h4>
+                <div class="name_num">
+                  <div>
+                  <h6 class="name-v1">JANE APPLESEED</h6>
+                  </div>
+                  <div class="expiry">
+                    <h6 class="expiration-v1">02</h6>
+                    <h6>/</h6>
+                    <h6 class="expiration-v2">23</h6>
+                  </div>
+            </div>
+          </div>
+          </div>
+          <div class="front_img">
+            <img src="/images/bg-card-front.png" alt="font-pg">
+          </div>
+        </div>
+        <div class="back_card">
+          <div class="back_card_content">
+            <h4 class="cvv-v1">000</h4>
+          </div>
+          <div class="back_img">
+           <img src="/images/bg-card-back.png" alt="card_back">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section_2">
+      <div class="input_form">
+        <form action="/" id="CardForm" method="get">
+          <div class="form_group">
+            <label>CARDHOLDER NAME</label>
+            <input type="text" id="card-name" name="card-name"
+             placeholder="e.g JANE APPLESEED" required
+             
+             onkeypress="return (event.charCode > 64 && event.charCode < 91) ||
+             (event.charCode > 96 && event.charCode < 123) || event.key == ' '"
+             >
+            <br>
+         </div>
+          <div class="form_group">
+            <label>CARD NUMBER:</label>
+            <input type="text" id="card-number"  name="card-number" maxlength="19" 
+            placeholder="e.g 1234 5678 9123 0000" required
+            
+            onkeypress="return (event.charCode > 48 && event.charCode < 57)"
+            >
+            <br>
+         </div>
+          <div class="expDate_cvv form_group">
+            
+            <div class="exp">
+              <label>EXP. DATE (MM/YY)</label>
+              <input type="text" id="valid-thru-date" name="expiryDate" 
+              placeholder="MM" maxlength="2" required
+              onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+              >
+              <input type="text" id="valid-thru-year" name="expiryDate"
+              maxlength="2" placeholder="YY" required
+              onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+              >
+              <br>
+           </div>
+           <div class="cvv">
+            <label for="cvv">CVV:</label>
+            <input type="text"  name="cvv" id="cvv-text" 
+            placeholder="e.g 123" maxlength="4"
+            onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+            <br>
+          </div>
+         </div>
+          <input  type="submit" value="Confirm">
+        </form>
+        
+      </div>
+    </div>
+    <div id="thank-you-message" class="thank-you-message">
+      <div class="thank-you-image">
+        <svg width="80" height="80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="40" cy="40" r="40" fill="url(#a)"/><path d="M28 39.92 36.08 48l16-16" 
+        stroke="#fff" stroke-width="3"/><defs><linearGradient id="a" x1="-23.014" y1="11.507"
+           x2="0" y2="91.507" gradientUnits="userSpaceOnUse"><stop stop-color="#6348FE"/>
+           <stop offset="1" stop-color="#610595"/></linearGradient></defs></svg>
+      </div>
+      <div class="thank-you-other-message">
+        <h4>THANK  YOU!</h4>
+        <h6>We have added your details</h6>
+      </div>
+      <div class="thank-you-btn">
+        <input type="button" value="continue">
+      </div>
+   </div>
+  </section>
+  
+
+  <!-- 0000 0000 0000 0000
+  Jane Appleseed
+  00/00
+
+  000
+
+  Cardholder Name
+  e.g. Jane Appleseed
+
+  Card Number
+  e.g. 1234 5678 9123 0000
+
+  Exp. Date (MM/YY)
+  MM
+  YY
+
+  CVC
+  e.g. 123
+
+  Confirm
+
+  <-- Completed state start -->
+
+  <!-- Thank you!
+  We've added your card details
+  Continue
+   --> 
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  <script src="card.js"></script>
+</body>
+</html>

@@ -1,0 +1,285 @@
+*{
+    padding: 0px;
+    margin: 0px;
+
+}
+body {
+    font-family: Arial, sans-serif;
+    display: grid;
+    grid-template-columns: 1.3fr 3fr;
+    font-family: sans-serif;
+    height: 100vh;
+  }
+  
+.section_1 {
+    background-image: url(images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+    color: aliceblue;
+    position: relative;
+}
+  
+
+.card_section {
+  position: absolute;
+  left: 50%;
+  top: 25%; 
+  font-size: 15px;
+  justify-content: center;
+  align-items: center;
+}
+.card_section img {
+  width: 360px;
+
+}
+
+.font_card {
+  margin-bottom: 20px;
+}
+
+.font_card_content {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 10px;
+  width: 320px;
+}
+
+.font_card_content .number-v1 {
+  margin-left: 3rem;
+  margin-top: 3.2rem;
+  font-size: 1.4rem;
+  word-spacing: 0.6rem;
+  
+  
+}
+
+.font_card_content h6 {
+  font-size: .7rem;
+}
+
+.expiry {
+  display: flex;
+}
+
+.name_num {
+  display: flex;
+  justify-content: space-between;
+  margin: 16px 0px 0px 6px;
+  align-items: center;
+}
+
+.back_card {
+  margin-left: 40px;
+}
+
+.back_card_content {
+  position: absolute;
+  bottom: 21%;
+  left: 75%;
+}
+
+.section_2 {
+  /* display: grid;
+  place-items: center; */
+  margin: auto;
+  
+}
+
+
+  .input_form {
+    position: fixed;
+    max-width: 700px;
+    /* margin: -10rem auto; */
+    bottom: 25%;
+    left: 50%;
+
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+
+  .red-border {
+    border: 5px solid red;
+    width: 80%; /* Adjust the width as needed */
+    padding: 10px;
+    margin-bottom: 10px;
+    display: inline-block; /* Display inputs in a line */
+    
+  }
+  
+ .form_group input{
+    width: 70%; /* Adjust the width as needed */
+    padding: 20px 20px;
+    margin-bottom: 10px;
+    display: inline-block; /* Display inputs in a line */
+    border-radius: 0.5rem;
+    border: 1px solid black;
+  }
+
+  
+  input[type="submit"] {
+    padding: 15px 18px;
+    background-color:  hsl(278, 68%, 11%);
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 80%;
+    border-radius: 10px;
+  }
+
+div.expDate_cvv {
+    display: flex;
+}
+
+.exp {
+    width: 40%;
+}
+
+.exp input {
+  width: 20%;
+  display: inline;
+}
+
+
+/* small screen design */
+@media only screen and (max-width: 600px) {
+  /* For Phones: */
+  body {
+    display: block;
+    height: 100vh;
+  }
+
+  .section_1 {
+    background-image: url(images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+    color: aliceblue;
+    position: absolute;
+    min-height: 58vh;
+    
+}
+
+
+.card_section {
+  position: relative;
+  font-size: 15px;
+  justify-content: center;
+  align-items: center;
+}
+.card_section img {
+  width: 60px;
+
+}
+
+
+
+.font_card_content {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 10px;
+  width: 320px;
+}
+
+.font_card_content .number-v1 {
+  margin-left: 3rem;
+  margin-top: 3.2rem;
+  font-size: 1.4rem;
+  word-spacing: 0.6rem;
+}
+.font_card_content h6 {
+  font-size: .7rem;
+}
+.name_num {
+  display: inline-flex;
+  justify-content: space-between;
+  margin: 16px 0px 0px 2px;
+  
+}
+.expiry {
+  margin-left: 10rem;
+}
+.section_2 {
+  background-color: aqua;
+  place-items: center;
+  
+  
+}
+.input_form {
+  position: relative;
+  max-width: 400px;
+  /* margin: -10rem auto; */
+  top: 25%;
+
+}
+ 
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+.form_group input{
+  width: 70%; /* Adjust the width as needed */
+  padding: 15px;
+  margin-bottom: 10px;
+  display: inline-block; /* Display inputs in a line */
+  border-radius: 0.5rem;
+  border: 1px solid black;
+}
+.exp input  {
+   padding: 15px 20px;
+}
+input[type="submit"] {
+  font-size: 14px;
+  padding: 23px 20px;
+  background-color:  hsl(278, 68%, 11%);
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 80%;
+  border-radius: 10px;
+}
+
+.exp input {
+  width: 20%;
+  display: inline;
+  /* padding-right: 25px; */
+}
+.cvv input {
+  /* padding: 15px 20px; */
+}
+
+}
+  .thank-you-message {
+    display: none;
+    /* margin: -10rem auto; */
+    bottom: 50%;
+    left: 50%;
+  }
+  .thank-you-other-message {
+    margin: 1.2rem 3rem 2rem 0.2rem;
+    
+  }
+  .thank-you-other-message h4 {
+    font-size: 25px;
+    font-weight: 300;
+  }
+
+  .thank-you-other-message  h6 {
+    font-weight: 100;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+  .thank-you-btn input {
+    font-size: 18px;
+    padding: 15px 30px;
+    background-color:  hsl(278, 68%, 11%);
+    color: aliceblue;
+    border: none;
+    cursor: pointer;
+    width: 80%;
+    border-radius: 10px;
+  }
